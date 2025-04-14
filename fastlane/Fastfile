@@ -2,12 +2,12 @@ default_platform(:ios)
 
 platform :ios do
   desc "Build and test the iOS project"
-  lane: build_and_test do:
-	scan(
-		workspace: "Project.xcodeproj",
-		scheme: "Project",
-		destination: "platform=iOS Simulator,name=iPhone 16,OS=18.4",
-		clean: true
-	)
+  lane :build_and_test do
+    scan(
+      project: "Project.xcodeproj",
+      scheme: "Project",
+      destination: "platform=iOS Simulator,name=iPhone 16,OS=18.4",
+      clean: true
+    )
   end
 end
