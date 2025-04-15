@@ -26,7 +26,6 @@ jobs:
       
     - name: Install Fastlane dependencies
       run: |
-        cd ios
         bundle install --path vendor/bundle
         
     - name: Run Fastlane tests
