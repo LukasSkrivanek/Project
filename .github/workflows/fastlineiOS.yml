@@ -2,9 +2,10 @@ name: iOS Fastlane CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
     branches: ["main"]
+
 jobs:
   build:
     runs-on: macos-latest
@@ -21,5 +22,8 @@ jobs:
       - name: Install Fastlane
         run: gem install fastlane -NV
 
+      - name: Install project dependencies
+        run: bundle install
+
       - name: Run Fastlane build_and_test
-        run: fastlane ios build_and_test
+        run: bundle exec fastlane ios build_and_test
