@@ -1,41 +1,25 @@
-name: Fastlane CI/CD
+name: iOS Fastlane CI
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
-    branches: [main]
-
+    branches: ["main"]
 jobs:
-  build_and_test:
-    name: Build and Test
-    runs-on: macOS-latest
-    
+  build:
+    runs-on: macos-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2.2'
-        bundler-cache: true
-      
-    - name: Install Bundler
-      run: gem install bundler
-      
-    - name: Install Fastlane dependencies
-      run: |
-        bundle install --path vendor/bundle
-        
-    - name: Run Fastlane tests
-      run: |
-        cd ios
-        bundle exec fastlane build_and_test
-        
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-reports
-        path: ios/fastlane/test_output
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      - name: Install Fastlane
+        run: gem install fastlane -NV
+
+      - name: Run Fastlane build_and_test
+        run: fastlane ios build_and_test
