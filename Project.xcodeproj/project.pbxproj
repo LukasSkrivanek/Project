@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA6914AC2DAEA9490098FF2A /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FA6914AB2DAEA9490098FF2A /* Config.xcconfig */; };
+		FA6915692DAEFF8D0098FF2A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA6915682DAEFF8D0098FF2A /* Kingfisher */; };
 		FAF1DE942DAE5BC400D35840 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FAF1DE932DAE5BC400D35840 /* Swinject */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6915692DAEFF8D0098FF2A /* Kingfisher in Frameworks */,
 				FAF1DE942DAE5BC400D35840 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +116,7 @@
 			name = Project;
 			packageProductDependencies = (
 				FAF1DE932DAE5BC400D35840 /* Swinject */,
+				FA6915682DAEFF8D0098FF2A /* Kingfisher */,
 			);
 			productName = Project;
 			productReference = FAF1DA0A2DACE0E400D35840 /* Project.app */;
@@ -172,6 +175,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				FAF1DE922DAE5BC400D35840 /* XCRemoteSwiftPackageReference "Swinject" */,
+				FA6915672DAEFF8D0098FF2A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FAF1DA0B2DACE0E400D35840 /* Products */;
@@ -523,6 +527,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA6915672DAEFF8D0098FF2A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
 		FAF1DE922DAE5BC400D35840 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -534,6 +546,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA6915682DAEFF8D0098FF2A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA6915672DAEFF8D0098FF2A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		FAF1DE932DAE5BC400D35840 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAF1DE922DAE5BC400D35840 /* XCRemoteSwiftPackageReference "Swinject" */;

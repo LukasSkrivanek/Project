@@ -30,7 +30,8 @@ struct DetailView: View {
     }
 
     private var bookImage: some View {
-        Text("Image")
+        ImageLoader(imageURL: book.thumbnail)
+            .frame(maxHeight: 300)
     }
 
     private var bookTitle: some View {
