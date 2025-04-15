@@ -23,15 +23,10 @@ final class NetworkManager: NetworkManaging {
         var request = try endpoint.urlRequest()
         request.timeoutInterval = 20
 
-        if let cachedResponse = cache.cachedResponse(for: request),
-           let decodedData = try? JSONDecoder().decode(T.self, from: cachedResponse.data)
-
-        {
-            return decodedData
-        }
-
         let (data, response) = try await session.data(for: request)
-
+        if let stringData = String(data: data, encoding: .utf8) {
+            print("Server Response: \(stringData)") // Tohle ti ukáže odpověď ve formátu string pro kontrolu
+        }
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkError.invalidResponse
         }

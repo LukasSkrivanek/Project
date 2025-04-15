@@ -4,7 +4,7 @@
 //
 //  Created by macbook on 15.04.2025.
 //
-// AIzaSyBUpxuqhfdi0NYu_S58ruBoB17YgSjTTfQ
+
 import Foundation
 
 struct GoogleBooksEndpoint: Endpoint {
@@ -28,8 +28,7 @@ struct GoogleBooksEndpoint: Endpoint {
         [
             "q": author,
             "langRestrict": "cs",
-            "key": "AIzaSyBUpxuqhfdi0NYu_S58ruBoB17YgSjTTfQ",
-            "maxResults": 40,
+            "key": APIKeyManager.shared.apiKey!,
             "orderBy": "relevance",
         ]
     }
