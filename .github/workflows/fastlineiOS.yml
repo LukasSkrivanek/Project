@@ -24,6 +24,9 @@ jobs:
         with:
           xcode-version: 'latest-stable'
 
+      - name: List available simulators
+        run: xcrun simctl list devices
+
       - name: Install Fastlane
         run: gem install fastlane -NV
 
