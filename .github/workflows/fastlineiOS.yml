@@ -22,11 +22,6 @@ jobs:
       
     - name: Install Bundler
       run: gem install bundler
-      
-    - name: Bundle install
-      run: |
-        cd ios 
-        bundle install --path vendor/bundle
         
     - name: Run Fastlane
       run: |
