@@ -60,6 +60,7 @@ struct BookListView: View {
         }
         .padding(.top, 16)
     }
+
     @ViewBuilder
     private var emptyState: some View {
         if viewModel.appState.isLoading {
