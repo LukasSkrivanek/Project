@@ -40,3 +40,4 @@ Thumbs.db
 *.dSYM.zip
 *.mobileprovision
 *.cer
+Config.xcconfig
