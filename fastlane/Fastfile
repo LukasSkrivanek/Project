@@ -7,8 +7,7 @@ platform :ios do
     scan(
       project: "Project.xcodeproj",
       scheme: "Project",
-      clean: true,
-      devices: ["iPhone 15 Pro (17.0)"]
+      clean: true
     )
   end
 end
