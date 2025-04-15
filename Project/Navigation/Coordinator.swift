@@ -49,6 +49,7 @@ final class Coordinator {
     func build(page: AppPages) -> some View {
         switch page {
         case .searchPage: BookListView()
+        case let .detailPage(book): DetailView(book: book)
         }
     }
 

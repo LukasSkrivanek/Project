@@ -84,6 +84,9 @@ struct BookListView: View {
     private var bookList: some View {
         List(viewModel.books, id: \.hashValue) { book in
             BookRow(book: book)
+                .anyButton {
+                    coordinator.push(page: .detailPage(book))
+                }
                 .redacted(reason: viewModel.appState.isLoading ? .placeholder : [])
                 .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
         }
