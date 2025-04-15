@@ -1,0 +1,34 @@
+name: Fastlane CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macOS-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.2' 
+        bundler-cache: true
+      
+    - name: Install Bundler
+      run: gem install bundler
+      
+    - name: Bundle install
+      run: |
+        cd ios 
+        bundle install --path vendor/bundle
+        
+    - name: Run Fastlane
+      run: |
+        cd ios
+        bundle exec fastlane build_and_test do
