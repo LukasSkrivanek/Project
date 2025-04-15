@@ -15,9 +15,11 @@ final class BookListViewModel {
     var errorMessage: String?
     var showError: Bool = false
     let appState: AppState
+    let repository: BooksRepository
 
-    init(appState: AppState) {
+    init(appState: AppState, repository: BooksRepository) {
         self.appState = appState
+        self.repository = repository
     }
 
     func fetchBooks() async {
@@ -26,12 +28,16 @@ final class BookListViewModel {
             showError = true
             return
         }
-
-        appState.isLoading = true
-        let fetchedBooks = MockData.mockBooks
-        books = fetchedBooks
-        errorMessage = nil
-        showError = false
+        do {
+            let fetchedBooks = try await repository.fetchBooks(for: textfieldText)
+            books = fetchedBooks
+            errorMessage = nil
+            showError = false
+        } catch {
+            errorMessage = error.localizedDescription
+            showError = true
+        }
+        appState.isLoading = false
 
         appState.isLoading = false
     }

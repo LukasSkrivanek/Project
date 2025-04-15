@@ -21,7 +21,21 @@ class DependencyContainer {
             AppState()
         }.inObjectScope(.container)
         container.register(BookListViewModel.self) { resolve in
-            BookListViewModel(appState: resolve.resolve(AppState.self)!)
+            BookListViewModel(
+                appState: resolve.resolve(
+                    AppState.self
+                )!,
+                repository: resolve.resolve(
+                    BooksRepository.self
+                )!
+            )
+        }.inObjectScope(.container)
+        container.register(NetworkManaging.self) { _ in
+            NetworkManager()
+        }
+        .inObjectScope(.container)
+        container.register(BooksRepository.self) { resolve in
+            BooksRepositoryImpl(networkManager: resolve.resolve(NetworkManaging.self)!)
         }.inObjectScope(.container)
     }
 
