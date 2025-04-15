@@ -92,4 +92,3 @@ struct BookListView: View {
         .listStyle(InsetListStyle())
     }
 }
-
