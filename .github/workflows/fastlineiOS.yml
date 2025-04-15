@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: Use secret as environment variables 
+        run: echo "API key is set"
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
