@@ -8,7 +8,7 @@ platform :ios do
       project: "Project.xcodeproj",
       scheme: "Project",
       clean: true
-      device: "iPhone 15"
+      devices: ["iPhone 15"]
     )
   end
 end
