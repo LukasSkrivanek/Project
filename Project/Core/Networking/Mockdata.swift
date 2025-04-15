@@ -38,4 +38,3 @@ class MockData {
     }
     """.data(using: .utf8)!
 }
-
