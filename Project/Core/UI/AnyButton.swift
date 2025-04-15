@@ -73,10 +73,9 @@ extension View {
             .padding()
         Text("Press me")
             .anyButton(.plain, action: {})
-        .padding()
-
+            .padding()
         Text("Pressable Button")
-        .anyButton(.press, action: {})
-        .padding()
+            .anyButton(.press, action: {})
+            .padding()
     }
 }
