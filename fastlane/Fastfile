@@ -8,7 +8,7 @@ platform :ios do
       project: "Project.xcodeproj",
       scheme: "Project",
       clean: true,
-      device: [
+      devices: [
       "iPhone 16 Pro (18.2)",
       "iPhone 16 Plus (18.2)",
       "iPhone SE (3rd generation) (18.2)"
