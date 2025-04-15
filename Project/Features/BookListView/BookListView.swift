@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct BookListView: View {
-    @Environment var coordinator: Coordinator
-    @Environment var viewModel: BookListViewModel
-    @Environment var appState: AppState
+    @Environment(Coordinator.self) var coordinator: Coordinator
+    @Environment(BookListViewModel.self) var viewModel: BookListViewModel
 
     var body: some View {
         VStack(spacing: 16) {
@@ -43,8 +42,7 @@ struct BookListView: View {
             .disableAutocorrection(true)
             .autocapitalization(.none)
             .padding(.horizontal)
-
-            if appState.isLoading {
+            if viewModel.appState.isLoading {
                 ProgressView()
                     .padding(.trailing, 8)
             } else {
@@ -62,10 +60,9 @@ struct BookListView: View {
         }
         .padding(.top, 16)
     }
-
     @ViewBuilder
     private var emptyState: some View {
-        if appState.isLoading {
+        if viewModel.appState.isLoading {
             Spacer()
             ProgressView("Načítání knih...")
                 .font(.headline)
@@ -86,10 +83,9 @@ struct BookListView: View {
     private var bookList: some View {
         List(viewModel.books, id: \.hashValue) { book in
             BookRow(book: book)
-                .redacted(reason: appState.isLoading ? .placeholder : [])
+                .redacted(reason: viewModel.appState.isLoading ? .placeholder : [])
                 .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
         }
         .listStyle(InsetListStyle())
     }
 }
-

@@ -14,7 +14,7 @@ final class BookListViewModel {
     var textfieldText: String = ""
     var errorMessage: String?
     var showError: Bool = false
-    private let appState: AppState
+    let appState: AppState
 
     init(appState: AppState) {
         self.appState = appState

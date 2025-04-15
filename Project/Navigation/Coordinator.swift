@@ -48,7 +48,7 @@ final class Coordinator {
     @ViewBuilder
     func build(page: AppPages) -> some View {
         switch page {
-        case .searchPage: EmptyView()
+        case .searchPage: BookListView()
         }
     }
 

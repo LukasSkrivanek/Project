@@ -19,7 +19,6 @@ class MockData {
             imageLinks: ImageLinks(thumbnail: "https://example.com")
         ),
     ]
-
     static let mockResponseData = """
     {
         "items": [
