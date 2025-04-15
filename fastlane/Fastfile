@@ -7,7 +7,7 @@ platform :ios do
     scan(
       project: "Project.xcodeproj",
       scheme: "Project",
-      destination: "platform=iOS Simulator,name=iPhone 16,OS=18.4",
+      device: "iPhone 15"
       clean: true
     )
   end
