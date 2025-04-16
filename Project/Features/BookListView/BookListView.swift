@@ -33,7 +33,7 @@ struct BookListView: View {
     @ViewBuilder
     private var searchField: some View {
         HStack {
-            TextField("Zadejte autora", text: .twoWay(\.textfieldText, on: viewModel), onCommit: {
+            TextField(L10n.searchPlaceholder, text: .twoWay(\.textfieldText, on: viewModel), onCommit: {
                 Task {
                     await viewModel.fetchBooks()
                 }
@@ -65,7 +65,7 @@ struct BookListView: View {
     private var emptyState: some View {
         if viewModel.appState.isLoading {
             Spacer()
-            ProgressView("Načítání knih...")
+            ProgressView(L10n.loadingText)
                 .font(.headline)
             Spacer()
         } else {

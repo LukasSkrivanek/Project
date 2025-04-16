@@ -1,0 +1,9 @@
+
+"searchPlaceholder" = "Zadejte autora";
+"emptyStateText" = "Žádné knihy nenalezeny";
+"loadingText" = "Načítání knih...";
+
+"bookTitle" = "Název";
+"authorLabel" = "Autor: ";
+"publishedDateLabel" = "Rok vydání: ";
+"openInGooglePlay" = "Otevřít v Google Play";

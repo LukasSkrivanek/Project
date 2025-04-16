@@ -1,0 +1,9 @@
+"searchPlaceholder" = "Enter author";
+"emptyStateText" = "No books found";
+"loadingText" = "Loading books...";
+
+
+"bookTitle" = "Title";
+"authorLabel" = "Author: ";
+"publishedDateLabel" = "Published Year: ";
+"openInGooglePlay" = "Open in Google Play";
