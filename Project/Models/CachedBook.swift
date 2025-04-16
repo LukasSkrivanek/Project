@@ -12,7 +12,7 @@ import SwiftData
 final class CachedBook {
     var id: String
     var title: String
-    var authors: [String]
+    @Attribute(.externalStorage) var authors: [String]
     var thumbnail: String
     var bookDescription: String
     var publishedDate: String
