@@ -42,10 +42,10 @@ struct DetailView: View {
 
     @ViewBuilder
     private var bookDetails: some View {
-        Text("Autor: \(book.authors.joined(separator: ", "))")
+        Text("\(L10n.authorLabel) \(book.authors.joined(separator: ", "))")
             .font(.title2)
             .foregroundColor(.secondary)
-        Text("Rok vydání: \(book.publishedDate)")
+        Text("\(L10n.publishedDateLabel) \(book.publishedDate)")
             .font(.subheadline)
             .foregroundColor(.secondary)
     }
@@ -63,7 +63,7 @@ struct DetailView: View {
     @ViewBuilder
     private var openInGooglePlayButton: some View {
         if let url = URL(string: book.infoLink) {
-            Text("Otevřít v Google Play")
+            Text(L10n.openInGooglePlay)
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()

@@ -20,12 +20,12 @@ struct BookListView: View {
                 bookList
             }
         }
-        .navigationTitle("Vyhledat knihy")
+        .navigationTitle(L10n.searchTitle)
         .alert(isPresented: .twoWay(\.showError, on: viewModel)) {
             Alert(
-                title: Text("Chyba"),
+                title: Text(L10n.errorTitle),
                 message: Text(viewModel.errorMessage ?? ""),
-                dismissButton: .default(Text("OK"))
+                dismissButton: .default(Text(L10n.emptyStateText))
             )
         }
     }
@@ -71,12 +71,12 @@ struct BookListView: View {
         } else {
             if #available(iOS 17, *) {
                 ContentUnavailableView(
-                    "Žádné knihy nenalezeny",
+                    L10n.emptyStateText,
                     systemImage: "magnifyingglass",
-                    description: Text("Zkuste změnit vyhledávací kritéria.")
+                    description: Text(L10n.emptyStateDescription)
                 )
             } else {
-                Text("Žádné knihy nenalezeny")
+                Text(L10n.emptyStateText)
             }
         }
     }

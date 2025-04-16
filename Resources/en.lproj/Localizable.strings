@@ -7,3 +7,12 @@
 "authorLabel" = "Author: ";
 "publishedDateLabel" = "Published Year: ";
 "openInGooglePlay" = "Open in Google Play";
+
+"searchTitle" = "Search Books";
+"searchPlaceholder" = "Enter author";
+"loadingText" = "Loading books...";
+"emptyStateText" = "No books found";
+"emptyStateDescription" = "Try changing the search criteria.";
+"errorTitle" = "Error";
+"errorDismissButton" = "OK";
+"language" = "en";
