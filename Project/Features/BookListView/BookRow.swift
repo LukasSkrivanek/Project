@@ -12,11 +12,11 @@ struct BookRow: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
-            // AsyncImage(url: URL(string: book.thumbnail)!)
-            // .scaledToFill()
-            //  .frame(width: 80, height: 120)
-            //  .cornerRadius(8)
-            //  .shadow(radius: 4)
+            ImageLoader(imageURL: book.thumbnail)
+                .scaledToFill()
+                .frame(width: 80, height: 120)
+                .cornerRadius(8)
+                .shadow(radius: 4)
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(book.title)
