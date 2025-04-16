@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA6914AC2DAEA9490098FF2A /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FA6914AB2DAEA9490098FF2A /* Config.xcconfig */; };
 		FA6915692DAEFF8D0098FF2A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA6915682DAEFF8D0098FF2A /* Kingfisher */; };
 		FAF1DE942DAE5BC400D35840 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FAF1DE932DAE5BC400D35840 /* Swinject */; };
 /* End PBXBuildFile section */
@@ -193,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6914AC2DAEA9490098FF2A /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
