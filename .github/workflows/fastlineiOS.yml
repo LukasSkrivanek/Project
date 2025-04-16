@@ -12,13 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Create Config.xcconfig
-        run: |
-          cat <<EOF > Project/Config.xcconfig
-          API_KEY = ${{ secrets.API_KEY }}
-          OTHER_CONFIG = value
-          EOF
           
       - name: Use secret as environment variables 
         run: echo "API key is set"
