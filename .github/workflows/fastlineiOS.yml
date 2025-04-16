@@ -35,5 +35,8 @@ jobs:
       - name: Install project dependencies
         run: bundle install
 
+      - name: Create Config.xcconfig from secret
+        run: echo "API_KEY = $API_KEY" > Project/Config.xcconfig
+
       - name: Run Fastlane build_and_test
         run: bundle exec fastlane build_and_test
