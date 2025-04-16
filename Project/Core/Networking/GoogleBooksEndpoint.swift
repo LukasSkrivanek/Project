@@ -27,7 +27,7 @@ struct GoogleBooksEndpoint: Endpoint {
     var parameters: [String: Any]? {
         [
             "q": author,
-            "langRestrict": "cs",
+            "langRestrict": L10n.language,
             "key": APIKeyManager.shared.apiKey!,
             "orderBy": "relevance",
         ]

@@ -1,0 +1,18 @@
+
+"searchPlaceholder" = "Zadejte autora";
+"emptyStateText" = "Žádné knihy nenalezeny";
+"loadingText" = "Načítání knih...";
+
+"bookTitle" = "Název";
+"authorLabel" = "Autor: ";
+"publishedDateLabel" = "Rok vydání: ";
+"openInGooglePlay" = "Otevřít v Google Play";
+
+"searchTitle" = "Vyhledat knihy";
+"searchPlaceholder" = "Zadejte autora";
+"loadingText" = "Načítání knih...";
+"emptyStateText" = "Žádné knihy nenalezeny";
+"emptyStateDescription" = "Zkuste změnit vyhledávací kritéria.";
+"errorTitle" = "Chyba";
+"errorDismissButton" = "OK";
+"language" = "cs";

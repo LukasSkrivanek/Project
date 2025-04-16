@@ -20,12 +20,12 @@ struct BookListView: View {
                 bookList
             }
         }
-        .navigationTitle("Vyhledat knihy")
+        .navigationTitle(L10n.searchTitle)
         .alert(isPresented: .twoWay(\.showError, on: viewModel)) {
             Alert(
-                title: Text("Chyba"),
+                title: Text(L10n.errorTitle),
                 message: Text(viewModel.errorMessage ?? ""),
-                dismissButton: .default(Text("OK"))
+                dismissButton: .default(Text(L10n.emptyStateText))
             )
         }
     }
@@ -33,7 +33,7 @@ struct BookListView: View {
     @ViewBuilder
     private var searchField: some View {
         HStack {
-            TextField("Zadejte autora", text: .twoWay(\.textfieldText, on: viewModel), onCommit: {
+            TextField(L10n.searchPlaceholder, text: .twoWay(\.textfieldText, on: viewModel), onCommit: {
                 Task {
                     await viewModel.fetchBooks()
                 }
@@ -65,18 +65,18 @@ struct BookListView: View {
     private var emptyState: some View {
         if viewModel.appState.isLoading {
             Spacer()
-            ProgressView("Načítání knih...")
+            ProgressView(L10n.loadingText)
                 .font(.headline)
             Spacer()
         } else {
             if #available(iOS 17, *) {
                 ContentUnavailableView(
-                    "Žádné knihy nenalezeny",
+                    L10n.emptyStateText,
                     systemImage: "magnifyingglass",
-                    description: Text("Zkuste změnit vyhledávací kritéria.")
+                    description: Text(L10n.emptyStateDescription)
                 )
             } else {
-                Text("Žádné knihy nenalezeny")
+                Text(L10n.emptyStateText)
             }
         }
     }
