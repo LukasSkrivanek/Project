@@ -1,16 +1,23 @@
-import SwiftData
+//
+//  CachedBook.swift
+//  Project
+//
+//  Created by macbook on 16.04.2025.
+//
+
 import Foundation
+import SwiftData
 
 @Model
 final class CachedBook {
-    let id: String
-    let title: String
-    let authors: [String]
-    let thumbnail: String
-    let bookDescription: String
-    let publishedDate: String
-    let infoLink: String
-    
+    var id: String
+    var title: String
+    var authors: [String]
+    var thumbnail: String
+    var bookDescription: String
+    var publishedDate: String
+    var infoLink: String
+
     init(id: String, title: String, authors: [String], thumbnail: String, bookDescription: String, publishedDate: String, infoLink: String) {
         self.id = id
         self.title = title
@@ -20,7 +27,7 @@ final class CachedBook {
         self.publishedDate = publishedDate
         self.infoLink = infoLink
     }
-    
+
     func toBook() -> Book {
         return Book(
             title: title,
@@ -29,17 +36,17 @@ final class CachedBook {
             description: bookDescription,
             publishedDate: publishedDate,
             infoLink: infoLink,
-            imageLinks: [ImageLinks(thumbnail: thumbnail)]
+            imageLinks: ImageLinks(thumbnail: thumbnail)
         )
     }
 }
 
 @Model
 final class CachedAuthorBooks {
-    let author: String
-    let lastUpdated: Date
+    var author: String
+    var lastUpdated: Date
     @Relationship(deleteRule: .cascade) var books: [CachedBook]
-    
+
     init(author: String, lastUpdated: Date, books: [CachedBook]) {
         self.author = author
         self.lastUpdated = lastUpdated

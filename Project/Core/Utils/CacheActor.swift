@@ -1,3 +1,13 @@
+//
+//  CacheActor.swift
+//  Project
+//
+//  Created by macbook on 16.04.2025.
+//
+
+import Foundation
+import SwiftData
+
 actor CacheActor {
     func getCachedBooks(for author: String, container: ModelContainer) throws -> [Book] {
         let context = ModelContext(container)
