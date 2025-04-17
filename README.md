@@ -43,12 +43,9 @@ API_KEY = YOUR_API_KEY
 ```
 YOUR_API_KEY reflace with real apikey
 
-3. 
-
-- Choose simulator with atleast iOS 17.6 .
+3. Choose simulator with atleast iOS 17.6 .
 (18.4) is buggy with loading api ```https://developer.apple.com/forums/thread/777999```
 
 4. Sources
-   
-[Dokumentation Google Books API](https://developers.google.com/books/docs/v1/using)
+   [Dokumentation Google Books API](https://developers.google.com/books/docs/v1/using)
 
