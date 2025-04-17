@@ -12,13 +12,21 @@ import SwiftData
 final class CachedBook {
     var id: String
     var title: String
-    @Attribute(.externalStorage) var authors: [String]
+    @Relationship(deleteRule: .cascade) var authors: [CachedAuthor]
     var thumbnail: String
     var bookDescription: String
     var publishedDate: String
     var infoLink: String
 
-    init(id: String, title: String, authors: [String], thumbnail: String, bookDescription: String, publishedDate: String, infoLink: String) {
+    init(
+        id: String,
+        title: String,
+        authors: [CachedAuthor],
+        thumbnail: String,
+        bookDescription: String,
+        publishedDate: String,
+        infoLink: String
+    ) {
         self.id = id
         self.title = title
         self.authors = authors
@@ -31,7 +39,7 @@ final class CachedBook {
     func toBook() -> Book {
         return Book(
             title: title,
-            authors: authors,
+            authors: authors.map { $0.name },
             thumbnail: thumbnail,
             description: bookDescription,
             publishedDate: publishedDate,
@@ -51,5 +59,14 @@ final class CachedAuthorBooks {
         self.author = author
         self.lastUpdated = lastUpdated
         self.books = books
+    }
+}
+
+@Model
+final class CachedAuthor {
+    var name: String
+
+    init(name: String) {
+        self.name = name
     }
 }

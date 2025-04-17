@@ -51,7 +51,7 @@ actor CacheActor {
             CachedBook(
                 id: UUID().uuidString,
                 title: book.title,
-                authors: book.authors,
+                authors: book.authors.map { author in CachedAuthor(name: author) },
                 thumbnail: book.thumbnail,
                 bookDescription: book.description ?? "",
                 publishedDate: book.publishedDate,
