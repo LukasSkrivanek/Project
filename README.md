@@ -43,7 +43,7 @@ API_KEY = YOUR_API_KEY
 ```
 YOUR_API_KEY reflace with real apikey
 
-3. Choose simulator with atleast iOS 17.6 .
+3. Choose simulator (ideal 18.2) .
 (18.4) is buggy with loading api ```https://developer.apple.com/forums/thread/777999```
 
 4. Sources
