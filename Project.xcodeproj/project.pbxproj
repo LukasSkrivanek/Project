@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA6915692DAEFF8D0098FF2A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA6915682DAEFF8D0098FF2A /* Kingfisher */; };
+		FA6919422DB0F7810098FF2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6919402DB0F7810098FF2A /* Localizable.strings */; };
 		FAF1DE942DAE5BC400D35840 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FAF1DE932DAE5BC400D35840 /* Swinject */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		FA6914AB2DAEA9490098FF2A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		FA69193E2DB0F7810098FF2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA69193F2DB0F7810098FF2A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAF1DA0A2DACE0E400D35840 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF1DA222DACEE1B00D35840 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -38,6 +41,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FA6919442DB0F7A60098FF2A /* Generated */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		FAF1DA0C2DACE0E400D35840 /* Project */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -73,10 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6919412DB0F7810098FF2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA6919402DB0F7810098FF2A /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FAF1DA012DACE0E400D35840 = {
 			isa = PBXGroup;
 			children = (
+				FA6919442DB0F7A60098FF2A /* Generated */,
 				FA6914AB2DAEA9490098FF2A /* Config.xcconfig */,
+				FA6919412DB0F7810098FF2A /* Resources */,
 				FAF1DA0C2DACE0E400D35840 /* Project */,
 				FAF1DA232DACEE1B00D35840 /* ProjectTests */,
 				FAF1DA0B2DACE0E400D35840 /* Products */,
@@ -110,6 +128,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				FA6919442DB0F7A60098FF2A /* Generated */,
 				FAF1DA0C2DACE0E400D35840 /* Project */,
 			);
 			name = Project;
@@ -169,6 +188,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = FAF1DA012DACE0E400D35840;
 			minimizedProjectReferenceProxies = 1;
@@ -193,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6919422DB0F7810098FF2A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +291,18 @@
 			targetProxy = FAF1DA262DACEE1B00D35840 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA6919402DB0F7810098FF2A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA69193E2DB0F7810098FF2A /* en */,
+				FA69193F2DB0F7810098FF2A /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FAF1DA132DACE0E500D35840 /* Debug */ = {
