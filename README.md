@@ -28,7 +28,7 @@ A simple iOS app built with SwiftUI that allows users to search for books by aut
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/LukasSkrivanek/SeznamTask.git
+git clone https://github.com/LukasSkrivanek/Project.git
 ```
 
 ## 2. Add API key
