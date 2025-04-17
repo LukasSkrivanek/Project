@@ -10,7 +10,7 @@ import SwiftUI
 import Swinject
 
 @MainActor
-class DependencyContainer {
+final class DependencyContainer {
     static let shared = DependencyContainer()
 
     let container: Container
